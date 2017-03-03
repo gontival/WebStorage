@@ -1,4 +1,7 @@
-﻿// setting the cookie value
+﻿/// <reference path="js-cookie.js" />
+
+
+// setting the cookie value
 function setCookie(cookieName, cookieValue, expirationDays) {
     var expirationDate = new Date();
     expirationDate.setDate(expirationDate.getDate(), expirationDays);
@@ -24,5 +27,11 @@ function getCookie(cookieName) {
 }
 
 // usage
-setCookie('firstName', 'Glenn', 1);
-var firstName = getCookie('firstName');
+//setCookie('firstName', 'Glenn', 1);
+//var firstName = getCookie('firstName');
+
+Cookies.set('firstName', 'Glenn', { expires: 7 });
+var userFirstName = Cookies.get('firstName');
+if (userFirstName) {
+    alert(userFirstName);
+}
