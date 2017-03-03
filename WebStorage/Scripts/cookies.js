@@ -32,6 +32,3 @@ function getCookie(cookieName) {
 
 Cookies.set('firstName', 'Glenn', { expires: 7 });
 var userFirstName = Cookies.get('firstName');
-if (userFirstName) {
-    alert(userFirstName);
-}
